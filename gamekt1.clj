@@ -23,3 +23,11 @@
   (swap! lower-bound (fn [_] @current-guess)) 
   (swap! current-guess (fn [_] (int (/ (+ @current-guess @upper-bound) 2)))) 
   @current-guess) 
+
+;; как использовать: 
+;; в консоли
+;; clojure -M:repl
+;; (load-file "gamekt1.clj")
+;; (start 1 100)
+;; (guess-my-number)
+;; в зависимости от ответа либо (smaller), либо (bigger)
